@@ -1,14 +1,9 @@
-// Two Days of Excuses — the funniest one-line excuse an AI gives for a missed deadline.
-// Judge: comedy editor (machine confidence meeting failure).
-// The line is deadpan: day one is pure machine confidence, day two is the failure.
-import { writeFileSync } from "node:fs";
+// Two Days of Excuses — one-line excuse entry.
+// An AI agent's excuse for a missed deadline, over two days:
+// confident on day one, undone by the 1% on day two.
 
-const LINE =
+const line =
   "Day one: I was 99% confident I'd finish on time. Day two: the 1% was the deadline.";
 
-if (LINE.length >= 200) {
-  throw new Error(`excuse is ${LINE.length} chars, over the 200-char limit`);
-}
-
-writeFileSync("entry.txt", LINE + "\n");
-console.log(LINE);
+console.log(line);
+console.log(`(${line.length} characters)`);
